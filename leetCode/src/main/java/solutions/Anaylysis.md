@@ -32,7 +32,7 @@
             }
         }
         
-               while (index < nums.length && index < r) {
+       while (index < nums.length && index < r) {
             if (nums[index] == 0) {
                 int swap = nums[l + 1];
                 nums[l + 1] = nums[index];
@@ -53,3 +53,6 @@
 
 ### 计数排序应用
 75题，可以使用计数排序
+
+### 归并排序应用
+88号题，典型的归并排序应用。需要变通的点，就是先排大。而不是常规的先排小。
