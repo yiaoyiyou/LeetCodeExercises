@@ -31,7 +31,10 @@ public class MoveZeros_283 {
         while (j < nums.length) {
             if (nums[j] != 0) {
                 i ++;
-                ArrayHelpers.swapInt(nums, i, j);
+                //优化：只有在不等的时候才需要交换
+                if (i != j) {
+                    ArrayHelpers.swapInt(nums, i, j);
+                }
             }
             j ++;
         }
