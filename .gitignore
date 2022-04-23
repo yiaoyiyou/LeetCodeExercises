@@ -26,5 +26,5 @@ hs_err_pid*
 *.idea
 
 # Test Files
-*.sr/test
+*.src/test
 
