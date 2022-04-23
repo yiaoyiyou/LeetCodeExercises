@@ -32,4 +32,26 @@ public class SortColors_75 {
         }
 
     }
+
+    public void sortColorsV1(int[] nums) {
+        //[0, l]
+        //[l, index)
+        //[r, length)
+        int l = -1, index = 0, r = nums.length;
+        while (index < nums.length && index < r) {
+            if (nums[index] == 0) {
+                int swap = nums[l + 1];
+                nums[l + 1] = nums[index];
+                nums[index] = swap;
+                l ++;
+                index ++;
+            } else if (nums[index] == 2) {
+                r--;
+                nums[index] = nums[r];
+                nums[r] = 2;
+            } else {
+                index ++;
+            }
+        }
+    }
 }
