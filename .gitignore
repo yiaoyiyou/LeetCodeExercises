@@ -25,6 +25,5 @@ hs_err_pid*
 # Idea Files
 *.idea
 
-# Test Files
-*.src/test
+./leetCode/src/test/
 
