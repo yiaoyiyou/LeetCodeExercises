@@ -24,6 +24,6 @@ hs_err_pid*
 
 # Idea Files
 *.idea
-
+# 测试文件过滤
 ./leetCode/src/test/*.*
 
