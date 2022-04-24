@@ -5,7 +5,7 @@ package solutions;
  * @Date 2022/4/24 9:00
  * @ClassName TwoSumII_167
  * @Link https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
- * @Analysis 二分查找法
+ * @Analysis 二分查找法,双索引法
  */
 public class TwoSumII_167 {
     public int[] twoSum(int[] numbers, int target) {
