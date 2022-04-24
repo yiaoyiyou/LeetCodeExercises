@@ -1,5 +1,8 @@
 package solutions;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @Author weike
  * @Date 2022/4/24 23:21
@@ -9,6 +12,7 @@ package solutions;
  */
 public class ValidPalindrome_125 {
     public boolean isPalindrome(String s) {
+        s.substring(1);
         if (s == null){
             throw new IllegalArgumentException("null input");
         }
