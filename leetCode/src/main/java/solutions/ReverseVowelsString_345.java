@@ -1,5 +1,6 @@
 package solutions;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,6 +42,31 @@ public class ReverseVowelsString_345 {
             j--;
         }
         return s;
+
+    }
+
+    public String reverseVowelsV1(String s) {
+        Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'));
+        char[] chars = s.toCharArray();
+        int i = 0, j = chars.length - 1;
+        while(i < j) {
+            while(i < chars.length && !vowels.contains(chars[i])) {
+                i ++;
+            }
+            while(j >= 0 && !vowels.contains(chars[j])) {
+                j --;
+            }
+            if (i >= j) {
+                return new String(chars);
+            }
+            char swap = chars[i];
+            chars[i] = chars[j];
+            chars[j] = swap;
+
+            i++;
+            j--;
+        }
+        return new String(chars);
 
     }
 }
