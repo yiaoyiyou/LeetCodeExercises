@@ -29,6 +29,25 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 
         }
         return sumLength;
+    }
+    public int lengthOfLongestSubstringV1(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        //[i, j]
+        int i = 0, j = -1;
+        int sumLength = -1;
+        int[] freq = new int[256];
+        while (i <s.length()) {
+            if (j + 1 < s.length() && freq[s.charAt(j + 1)] == 0) {
+                freq[s.charAt(++j)] ++;
+            } else {
+                freq[s.charAt(i++)] --;
+            }
+            sumLength = Math.max(sumLength, j - i + 1);
+
+        }
+        return sumLength == -1 ? 0 :sumLength;
 
     }
 }
