@@ -108,6 +108,14 @@
    3. 判断是否有效
    4. 更新做边界
 
+## 查找问题
+### 普通查找
+1. 349，没啥，就是数据下api。
+```java
+leftSet.retainAll(rightSet);
+leftSet.stream().mapToInt(Integer::intValue).toArray()
+
+```
 
 
 
