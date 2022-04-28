@@ -114,8 +114,10 @@
 ```java
 leftSet.retainAll(rightSet);
 leftSet.stream().mapToInt(Integer::intValue).toArray()
+        res.stream().mapToInt(Integer::valueOf).toArray()
 
 ```
+2. 350，熟悉下map api，没啥
 
 
 
