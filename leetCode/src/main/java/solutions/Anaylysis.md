@@ -118,6 +118,7 @@ leftSet.stream().mapToInt(Integer::intValue).toArray()
 
 ```
 2. 350，熟悉下map api，没啥
+3. 242，字符串中的字符操作，利用计数排序思想
 
 
 
