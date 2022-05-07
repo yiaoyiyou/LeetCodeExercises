@@ -121,4 +121,30 @@ leftSet.stream().mapToInt(Integer::intValue).toArray()
 3. 242，字符串中的字符操作，利用计数排序思想
 
 
+## 链表
+链表问题，最重要的是找好每次操作的单元
+### 反转链表
+1. 206 最简单的链表反转问题
+注意其初识、边界、更新的操作，有时可以起到事半功倍的效果。但一定要保证每次操作都有效。
+比如：
+- 初识cur没指向pre，所以最后返回的头结点是pre
+- 只用检查cur不为空
+- 这样子，连非空判断的逻辑都包含了
+```java
+        //注意，初识状态cur 并没指向pre
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            //防止丢失
+            ListNode next = cur.next;
+            //交换位置
+            cur.next = pre;
+            //更新变量
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+```
+
+
 
