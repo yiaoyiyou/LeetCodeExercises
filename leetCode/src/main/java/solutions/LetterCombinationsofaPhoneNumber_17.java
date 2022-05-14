@@ -10,6 +10,7 @@ import java.util.List;
  * @Analysis
  */
 public class LetterCombinationsofaPhoneNumber_17 {
+    // O(3^n) 即O(2^)
     String[] letters = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     List<String> res;
 
