@@ -176,7 +176,38 @@ leftSet.stream().mapToInt(Integer::intValue).toArray()
 回溯一般指的查找 
 ### 排列问题
 1. 17 注意其中的回溯过程。
-2. 40
+2. 40 排列
    处理排列问题时，要注意几点：
    1. 回溯后，需要删除
    2. 添加到最后结果时，需要深拷贝
+   3. 当用used做优化时，切记标记位的index处理，每写一行代码，都要知道其含义、影响
+3. 77 组合
+   利用raw回溯算法时，需要注定下边界条件
+   注意每个变量的含义
+   ```java
+        //从start开始
+        //包含n
+        for (int i = start; i <= n; i ++) {
+            cmb.add(i);
+            // 是从i的下一个开始
+            generateCombination(n, k , i + 1, cmb);
+            cmb.remove(cmb.size() - 1);
+        }
+   ```
+
+   注意运用剪枝
+      //剪枝
+        if (n - start + 1 + cmb.size() < k) {
+            return;
+        }
+4. 79 单词路径问题，注意，不要提前return。因为当次失败了，其他回溯还可能成功
+   ```java
+
+                if (validPos(new_x, new_y) && !visited[new_x][new_y] && searchWord(board, word, index + 1, new_x, new_y)) {
+                    return true;
+                }
+   //不能
+   return searchWord();
+   ```
+5. 206注意，不要重复定义基础变量。
+   
