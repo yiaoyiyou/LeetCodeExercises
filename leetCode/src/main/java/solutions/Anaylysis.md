@@ -228,10 +228,10 @@ leftSet.stream().mapToInt(Integer::intValue).toArray()
 ```
 
    2. 自底向上，记忆化搜索
-
-
-
+   
 3. Jz42 Jz47 自底向上思考的dp
+4. 198 第一个递归版本，是不会通过的
+   动态规划求解时，要点就是想好状态转移方程  
 
 
 
